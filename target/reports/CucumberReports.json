@@ -1,0 +1,121 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-30T02:04:27.503Z",
+        "line": 14,
+        "name": "validar campo",
+        "description": "",
+        "id": "cadastro-de-pet;validar-campo",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1566067400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que tenho um payload valido",
+            "match": {
+              "location": "steps.PetSteps.queTenhoUmPayloadValido()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3681504700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "realizo uma requisicao de post do pet",
+            "match": {
+              "location": "steps.PetSteps.realizoUmaRequisicaoDePostDoPet()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1010836100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "valido o campo \"name\" com o valor \"dog\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"name\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"dog\"",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 33210000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "valido o campo \"category.name\" com o valor \"poodle\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"category.name\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"poodle\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 41017800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "guardo o id gerado do pet",
+            "match": {
+              "location": "steps.PetSteps.guardoOIdGeradoDoPet()"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@pet"
+          },
+          {
+            "name": "@ValidacaoPet"
+          }
+        ]
+      }
+    ],
+    "name": "Cadastro de Pet",
+    "description": "  Realizar testes no cadastro de pet",
+    "id": "cadastro-de-pet",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/pet.feature",
+    "tags": [
+      {
+        "name": "@pet",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
