@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import util.RestUtil;
 
-public class ConsultaCepTest {
+public class ConsultaCep {
 
 	// http://viacep.com.br/ws/26260230/json
 	private String url = "http://viacep.com.br/ws/";
@@ -21,7 +21,7 @@ public class ConsultaCepTest {
 		RestUtil.setEndpoint(endpoint);
 
 		RestUtil.setUrl(url); // setando a URL
-		RestUtil.get(); // chamando o método get na classe RestUtil
+		RestUtil.get(); // chamando o mï¿½todo get na classe RestUtil
 
 		assertEquals(200, RestUtil.getStatus()); // validando o status do response
 	}
@@ -42,7 +42,7 @@ public class ConsultaCepTest {
 		// o que se espera na consulta do response
 		assertEquals(200, RestUtil.getStatus()); // validando o status do response
 		assertEquals("Rua Dom Manuel", RestUtil.getJson("logradouro"));
-		assertEquals("Nova Iguaçu", RestUtil.getJson("localidade"));
+		assertEquals("Nova Iguaï¿½u", RestUtil.getJson("localidade"));
 	}
 
 	@Test
@@ -61,6 +61,6 @@ public class ConsultaCepTest {
 		// o que se espera na consulta do response
 		assertEquals(200, RestUtil.getStatus()); // validando o status do response
 		assertEquals("Rua Dom Manuel", RestUtil.getJson("logradouro"));
-		assertEquals("Nova Iguaçu", RestUtil.getJson("localidade"));
+		assertEquals("Nova Iguaï¿½u", RestUtil.getJson("localidade"));
 	}
 }

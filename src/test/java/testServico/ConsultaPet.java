@@ -9,7 +9,7 @@ import entidade.Pet;
 import massa.PetMassa;
 import util.RestUtil;
 
-public class ConsultaPetTest {
+public class ConsultaPet {
 
 	//utilizando swagger PetStore
 	// https://petstore.swagger.io/v2/pet
@@ -27,14 +27,14 @@ public class ConsultaPetTest {
 		// fazendo a consulta
 		RestUtil.post(pet.get());
 
-		// verificando a validadção dos campos
+		// verificando a validadï¿½ï¿½o dos campos
 		assertEquals(200, RestUtil.getStatus());
 		assertEquals("dog", RestUtil.getJson("name"));
 		assertEquals("poodle", RestUtil.getJson("category.name"));
 		assertEquals("veronica", RestUtil.getJson("tags[0].name")); // primerio item da lista tag
 		
-		assertNotEquals("", RestUtil.getJson("id")); // verifica se o campo está vazio
-		assertNotEquals(null, RestUtil.getJson("id")); // verifica se o campo está nulo
+		assertNotEquals("", RestUtil.getJson("id")); // verifica se o campo estï¿½ vazio
+		assertNotEquals(null, RestUtil.getJson("id")); // verifica se o campo estï¿½ nulo
 	}
 
 }

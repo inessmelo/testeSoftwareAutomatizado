@@ -14,10 +14,10 @@ public class PetSteps {
 	String url, endpoint;
 	Pet pet;
 
-	@Dado("que tenho um payload valido")
+	@Dado("que tenho um payload valido do pet")
 	public void queTenhoUmPayloadValido() {
-		url = PetMassa.url;             // setando a URL
-		endpoint = PetMassa.endpoint;   // setando o endpoint
+		url = PetMassa.url; // setando a URL
+		endpoint = PetMassa.endpoint; // setando o endpoint
 		pet = PetMassa.gerarMassaPet(); // setando o pet já com a massa
 		RestUtil.setUrl(url);
 		RestUtil.setEndpoint(endpoint);
@@ -40,7 +40,12 @@ public class PetSteps {
 
 	@Entao("guardo o id gerado do pet")
 	public void guardoOIdGeradoDoPet() {
-		PetMassa.id = RestUtil.getJson("id").toString();  //guardando o id do pet gerado e transformando para String
+		PetMassa.id = RestUtil.getJson("id").toString(); // guardando o id do pet gerado e transformando para String
+	}
+
+	@Quando("altero o valor do nome do pet para {string}")
+	public void alteroOValorDoNomeDoPetPara(String nome) {
+		pet.setPet("name", nome);
 	}
 
 }
