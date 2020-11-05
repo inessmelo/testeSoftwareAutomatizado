@@ -3,20 +3,20 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2020-10-30T20:58:40.696Z",
-        "line": 7,
-        "name": "validar status code",
+        "start_timestamp": "2020-10-30T22:57:31.172Z",
+        "line": 34,
+        "name": "Crud Pet",
         "description": "",
-        "id": "cadastro-de-pet;validar-status-code",
+        "id": "cadastro-de-pet;crud-pet",
         "type": "scenario",
         "keyword": "Cenario",
         "steps": [
           {
             "result": {
-              "duration": 1686676600,
+              "duration": 1490367400,
               "status": "passed"
             },
-            "line": 8,
+            "line": 35,
             "name": "que tenho um payload valido do pet",
             "match": {
               "location": "steps.PetSteps.queTenhoUmPayloadValido()"
@@ -25,105 +25,70 @@
           },
           {
             "result": {
-              "duration": 3056431500,
               "status": "passed"
             },
-            "line": 9,
-            "name": "realizo uma requisicao de post do pet",
+            "line": 36,
+            "name": "altero o valor do nome do pet",
             "match": {
-              "location": "steps.PetSteps.realizoUmaRequisicaoDePostDoPet()"
+              "location": "steps.PetSteps.alteroOValorDoNomeDoPet()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 3904500,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 10,
-            "name": "valido o status code 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 21
-                }
-              ],
-              "location": "steps.PetSteps.validoOStatusCode(int)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@pet"
-          },
-          {
-            "name": "@StatusPet"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-30T20:58:45.597Z",
-        "line": 13,
-        "name": "validar campo",
-        "description": "",
-        "id": "cadastro-de-pet;validar-campo",
-        "type": "scenario",
-        "keyword": "Cenario",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "que tenho um payload valido do pet",
-            "match": {
-              "location": "steps.PetSteps.queTenhoUmPayloadValido()"
-            },
-            "keyword": "Dado "
+            "line": 37,
+            "name": "altero o valor do nome da categoria do pet",
+            "match": {},
+            "keyword": "E "
           },
           {
             "result": {
-              "duration": 851156300,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 15,
+            "line": 38,
+            "name": "altero o valor do nome da tags do pet",
+            "match": {},
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 39,
             "name": "realizo uma requisicao de post do pet",
             "match": {
               "location": "steps.PetSteps.realizoUmaRequisicaoDePostDoPet()"
             },
-            "keyword": "Quando "
+            "keyword": "E "
           },
           {
             "result": {
-              "duration": 1129003700,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 16,
-            "name": "valido o campo \"name\" com o valor \"dog\"",
+            "line": 40,
+            "name": "guardo o id gerado do pet",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"name\"",
-                  "offset": 15
-                },
-                {
-                  "val": "\"dog\"",
-                  "offset": 34
-                }
-              ],
-              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
+              "location": "steps.PetSteps.guardoOIdGeradoDoPet()"
             },
             "keyword": "Entao "
           },
           {
             "result": {
-              "duration": 47856100,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 17,
-            "name": "valido o campo \"category.name\" com o valor \"poodle\"",
+            "line": 41,
+            "name": "realizo uma requisicao de get do pet utilizando o id",
+            "match": {},
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 42,
+            "name": "valido o campo \"category.name\" com o valor \"labrador\"",
             "match": {
               "arguments": [
                 {
@@ -131,24 +96,81 @@
                   "offset": 15
                 },
                 {
-                  "val": "\"poodle\"",
+                  "val": "\"labrador\"",
                   "offset": 43
                 }
               ],
               "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
             },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 43,
+            "name": "valido o campo \"name\" com o valor \"kinha\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"name\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"kinha\"",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
+            },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 53717500,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 18,
-            "name": "guardo o id gerado do pet",
+            "line": 44,
+            "name": "valido o campo \"tags.name\" com o valor \"lucas\"",
             "match": {
-              "location": "steps.PetSteps.guardoOIdGeradoDoPet()"
+              "arguments": [
+                {
+                  "val": "\"tags.name\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"lucas\"",
+                  "offset": 39
+                }
+              ],
+              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
             },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 45,
+            "name": "altero o valor da tags do pet para \"everton\"",
+            "match": {},
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 46,
+            "name": "altero o valor do id do pet para armazenamento",
+            "match": {},
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 47,
+            "name": "realizo uma requisicao de put do pet",
+            "match": {},
             "keyword": "E "
           }
         ],
@@ -157,251 +179,7 @@
             "name": "@pet"
           },
           {
-            "name": "@ValidacaoPet"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-30T20:58:47.702Z",
-        "line": 29,
-        "name": "Cadastro Pet Fiona",
-        "description": "",
-        "id": "cadastro-de-pet;\u003ccenario\u003e;;2",
-        "type": "scenario",
-        "keyword": "Esquema do Cenario",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "que tenho um payload valido do pet",
-            "match": {
-              "location": "steps.PetSteps.queTenhoUmPayloadValido()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "altero o valor do nome do pet para \"Fiona\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Fiona\"",
-                  "offset": 35
-                }
-              ],
-              "location": "steps.PetSteps.alteroOValorDoNomeDoPetPara(java.lang.String)"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 822340900,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "realizo uma requisicao de post do pet",
-            "match": {
-              "location": "steps.PetSteps.realizoUmaRequisicaoDePostDoPet()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 55668700,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "valido o campo \"name\" com o valor \"Fiona\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"name\"",
-                  "offset": 15
-                },
-                {
-                  "val": "\"Fiona\"",
-                  "offset": 34
-                }
-              ],
-              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@pet"
-          },
-          {
-            "name": "@EsquemaCenario"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-30T20:58:48.603Z",
-        "line": 30,
-        "name": "Cadastro Pet Flora",
-        "description": "",
-        "id": "cadastro-de-pet;\u003ccenario\u003e;;3",
-        "type": "scenario",
-        "keyword": "Esquema do Cenario",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "que tenho um payload valido do pet",
-            "match": {
-              "location": "steps.PetSteps.queTenhoUmPayloadValido()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "altero o valor do nome do pet para \"Flora\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Flora\"",
-                  "offset": 35
-                }
-              ],
-              "location": "steps.PetSteps.alteroOValorDoNomeDoPetPara(java.lang.String)"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 879968000,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "realizo uma requisicao de post do pet",
-            "match": {
-              "location": "steps.PetSteps.realizoUmaRequisicaoDePostDoPet()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 54686700,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "valido o campo \"name\" com o valor \"Flora\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"name\"",
-                  "offset": 15
-                },
-                {
-                  "val": "\"Flora\"",
-                  "offset": 34
-                }
-              ],
-              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@pet"
-          },
-          {
-            "name": "@EsquemaCenario"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-30T20:58:49.553Z",
-        "line": 31,
-        "name": "Cadastro Pet Pandora",
-        "description": "",
-        "id": "cadastro-de-pet;\u003ccenario\u003e;;4",
-        "type": "scenario",
-        "keyword": "Esquema do Cenario",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "que tenho um payload valido do pet",
-            "match": {
-              "location": "steps.PetSteps.queTenhoUmPayloadValido()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 977400,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "altero o valor do nome do pet para \"Pandora\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pandora\"",
-                  "offset": 35
-                }
-              ],
-              "location": "steps.PetSteps.alteroOValorDoNomeDoPetPara(java.lang.String)"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 842848700,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "realizo uma requisicao de post do pet",
-            "match": {
-              "location": "steps.PetSteps.realizoUmaRequisicaoDePostDoPet()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 21485300,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "valido o campo \"name\" com o valor \"Pandora\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"name\"",
-                  "offset": 15
-                },
-                {
-                  "val": "\"Pandora\"",
-                  "offset": 34
-                }
-              ],
-              "location": "steps.PetSteps.validoOCampoComOValor(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@pet"
-          },
-          {
-            "name": "@EsquemaCenario"
+            "name": "@CrudPet"
           }
         ]
       }

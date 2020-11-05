@@ -39,15 +39,15 @@ public class RestUtil {
 		RestUtil.response = response;
 	}
 
-	// criando método para contentType
+	// criando metodo para contentType
 	public static RequestSpecification initRequest(ContentType contentType) {
 		return RestAssured.given().relaxedHTTPSValidation() // desconsidera se tiver HTTPS
 				.contentType(contentType);                  // tipo de envio (JSON)
 	}
 	
-	//criando o método POST para o RESPONSE
+	//criando o metodo POST para o RESPONSE
 	public static void post(Object json) {
-		Response response = initRequest(ContentType.JSON) // chamando o método e passando o tipo do contentType
+		Response response = initRequest(ContentType.JSON) // chamando o mï¿½todo e passando o tipo do contentType
 				.body(json)                    //mandando o objeto
 				.when().post(endpoint)         // fazendo um POST e clicando no SEND
 				.then().extract().response();  // extraindo todo o response
@@ -56,7 +56,7 @@ public class RestUtil {
 	
 	//criando um POST com HEADER para o RESPONSE
 	public static void postHeader(Object json, LinkedHashMap<String, String> header) {
-		Response response = initRequest(ContentType.JSON) // chamando o método e passando o tipo do contentType
+		Response response = initRequest(ContentType.JSON) // chamando o mï¿½todo e passando o tipo do contentType
 				.headers(header)               //mandando o header 
 				.body(json)                    //mandando o objeto
 				.when().post(endpoint)         // fazendo um POST e clicando no SEND
@@ -64,61 +64,61 @@ public class RestUtil {
 		setResponse(response);                 // guardando o valor do response
 	}
 	
-	//criando método POST com FORM-URLENCODED
+	//criando metodo POST com FORM-URLENCODED
 	public static void postUrlEncoded(LinkedHashMap<String, String> json) {
-		Response response = initRequest(ContentType.URLENC) //chamando o método e passando o form-urlencoded
+		Response response = initRequest(ContentType.URLENC) //chamando o mï¿½todo e passando o form-urlencoded
 				.formParams(json)              //mandando o objeto como parametro
 				.when().post(endpoint)         // fazendo um POST e clicando no SEND
 				.then().extract().response();  // extraindo todo o response
 		setResponse(response);                 // guardando o valor do response
 	}
 	
-	//criando método POST com FORM-URLENCODED e HEADER
+	//criando metodo POST com FORM-URLENCODED e HEADER
 	public static void postFormHeader(LinkedHashMap<String, String> json, LinkedHashMap<String, String> header) {
-		Response response = initRequest(ContentType.URLENC) // chamando o método e passando o tipo do contentType
+		Response response = initRequest(ContentType.URLENC) // chamando o mï¿½todo e passando o tipo do contentType
 				.formParams(json)              //mandando o objeto como parametro
-				.headers(header)               //mandando o objeto como cabeçalho
+				.headers(header)               //mandando o objeto como cabeï¿½alho
 				.when().post(endpoint)         // fazendo um POST e clicando no SEND
 				.then().extract().response();  // extraindo todo o response
 		setResponse(response);                 // guardando o valor do response
 	}
 	
-	//criando método PUT para o RESPONSE
-	public static void put(Object json) {
-		Response response = initRequest(ContentType.JSON) // chamando o método e passando o tipo do contentType
+	//criando metodo PUT para o RESPONSE
+	public static void put(LinkedHashMap<String, Object> json) {
+		Response response = initRequest(ContentType.JSON) // chamando o mï¿½todo e passando o tipo do contentType
 				.body(json)                    //mandando o objeto no corpo do RAW
 				.when().put(endpoint)          // fazendo um PUT e clicando no SEND
 				.then().extract().response();  // extraindo todo o response
 		setResponse(response);                 // guardando o valor do response
 	}
 	
-	//criando um método PUT com HEADER
-	public static void putHeader(Object json, LinkedHashMap<String, String> header) {
-		Response response = initRequest(ContentType.JSON) // chamando o método e passando o tipo do contentType
+	//criando um metodo PUT com HEADER
+	public static void putHeader(LinkedHashMap<String, Object> json, LinkedHashMap<String, String> header) {
+		Response response = initRequest(ContentType.JSON) // chamando o mï¿½todo e passando o tipo do contentType
 				.headers(header)               //mandando o header
 				.when().put(endpoint)          // fazendo um PUT e clicando no SEND
 				.then().extract().response();  // extraindo todo o response
 		setResponse(response);                 // guardando o valor do response
 	}
 
-	// criando método GET para o RESPONSE
+	// criando metodo GET para o RESPONSE
 	public static void get() {
-		Response response = initRequest(ContentType.JSON) // chamando o método e passando o tipo do contentType
+		Response response = initRequest(ContentType.JSON) // chamando o mï¿½todo e passando o tipo do contentType
 				.when().get(endpoint)         // fazendo um GET e clicando no SEND
 				.then().extract().response(); // extraindo todo o response
 		setResponse(response);                // guardando o valor do response
 	}
 
-	//criando método GET com HEADER
+	//criando metodo GET com HEADER
 	public static void getHeaders(LinkedHashMap<String, String> header) {
-		Response response = RestUtil.initRequest(ContentType.JSON) // chamando o método e passando o tipo do contentType
+		Response response = RestUtil.initRequest(ContentType.JSON) // chamando o mï¿½todo e passando o tipo do contentType
 				.headers(header)              //pegando o header
 				.when().get(endpoint)         // fazendo um GET e clicando no SEND
 				.then().extract().response(); // extraindo todo o response
 		setResponse(response);                // guardando o valor do response
 	}
 	
-	//criando método GET com HEADER e PARAM
+	//criando mï¿½todo GET com HEADER e PARAM
 	public static void getHeadersParams(LinkedHashMap<String, String> header,
 			LinkedHashMap<String, String> param) {
 		Response response = initRequest(ContentType.JSON)
@@ -128,28 +128,28 @@ public class RestUtil {
 		setResponse(response);                 // guardando o valor do response
 	}
 
-	//criando método GET com PARAM
+	//criando mï¿½todo GET com PARAM
 	public static void getParams(LinkedHashMap<String, String> param) {
-		Response response = RestUtil.initRequest(ContentType.JSON) // chamando o método e passando o tipo do contentType
+		Response response = RestUtil.initRequest(ContentType.JSON) // chamando o mï¿½todo e passando o tipo do contentType
 				.params(param)                // add os paramentros identificado acima
 				.when().get(endpoint)         // fazendo um GET e clicar no SEND
 				.then().extract().response(); // extraindo todo o response
 		setResponse(response);                // guardando o valor do response
 	}
 
-	// criando método para o HEADER
+	// criando mï¿½todo para o HEADER
 	public RequestSpecification initRequest(ContentType contentType, LinkedHashMap<String, String> header) {
 		return RestAssured.given().relaxedHTTPSValidation() // desconsidera se tiver HTTPS
 				.contentType(contentType)                   // tipo de envio (JSON)
 				.headers(header);                           // validando o header
 	}
 
-	//criando método para retornar o status do response
+	//criando mï¿½todo para retornar o status do response
 	public static int getStatus() {
 		return getResponse().statusCode();       
 	}
 	
-	//criando método para retornar o JSON do Body
+	//criando mï¿½todo para retornar o JSON do Body
 	public static Object getJson(String key) {
 		JsonPath json = getResponse().getBody().jsonPath();  //seleciona todo o body do response em JSON
 		return json.get(key);                                //retorna o valor do JSON

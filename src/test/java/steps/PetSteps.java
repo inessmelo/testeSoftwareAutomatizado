@@ -18,7 +18,7 @@ public class PetSteps {
 	public void queTenhoUmPayloadValido() {
 		url = PetMassa.url; // setando a URL
 		endpoint = PetMassa.endpoint; // setando o endpoint
-		pet = PetMassa.gerarMassaPet(); // setando o pet já com a massa
+		pet = PetMassa.gerarMassaPet(); // setando o pet jï¿½ com a massa
 		RestUtil.setUrl(url);
 		RestUtil.setEndpoint(endpoint);
 	}
@@ -48,4 +48,43 @@ public class PetSteps {
 		pet.setPet("name", nome);
 	}
 
+	
+	//fazendo o CRUD = POST + GET + PUT + GET
+	@Quando("altero o valor do nome do pet")
+	public void alteroOValorDoNomeDoPet() {
+		pet.setPet("name", "kinha");
+	}
+	/*
+	@Quando("altero o valor do nome da categoria do pet")
+	public void alteroOValorDoNomeDaCategoriaDoPet() {
+		pet.setPet("category.name", "labrador");
+	}
+
+	@Quando("altero o valor do nome da tags do pet")
+	public void alteroOValorDoNomeDaTagsDoPet() {
+		pet.setPet("tags.name", "lucas");
+	}
+
+	@Quando("realizo uma requisicao de get do pet utilizando o id")
+	public void realizoUmaRequisicaoDeGetDoPetUtilizandoOId() {
+		RestUtil.get();
+	}
+
+	@Quando("altero o valor da tags do pet para {string}")
+	public void alteroOValorDaTagsDoPetPara(String nome) {
+		pet.setPet("tags.name", nome);
+	}
+
+	@Quando("altero o valor do id do pet para armazenamento")
+	public void alteroOValorDoIdDoPetParaArmazenamento() {
+		String id = PetMassa.id;
+		pet.setPet("id", id);
+	}
+
+	@Quando("realizo uma requisicao de put do pet")
+	public void realizoUmaRequisicaoDePutDoPet() {
+		RestUtil.setEndpoint(endpoint);
+		RestUtil.put(pet.get());
+	}
+*/
 }

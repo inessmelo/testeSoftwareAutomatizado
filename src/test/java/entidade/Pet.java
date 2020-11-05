@@ -17,7 +17,7 @@ public class Pet {
 		pet.put("status", status);
 	}
 	
-	//criando o método para guardar a chave e o valor
+	//criando o mï¿½todo para guardar a chave e o valor
 	public void setPet(String chave, Object valor) {
 		pet.put(chave, valor);
 	}
@@ -25,6 +25,11 @@ public class Pet {
 	//inserindo todos os dados tag em uma lista
 	public void setPet(LinkedHashMap<String, Object> mapa) {
 		pet.putAll(mapa);
+	}
+	
+	//removendo Pet
+	public void removePet(String chave) {
+		pet.remove(chave);
 	}
 	
 	//retornando o pet
