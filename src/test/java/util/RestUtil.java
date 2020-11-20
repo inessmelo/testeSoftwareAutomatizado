@@ -119,8 +119,7 @@ public class RestUtil {
 	}
 	
 	//criando m�todo GET com HEADER e PARAM
-	public static void getHeadersParams(LinkedHashMap<String, String> header,
-			LinkedHashMap<String, String> param) {
+	public static void getHeadersParams(LinkedHashMap<String, String> header, LinkedHashMap<String, String> param) {
 		Response response = initRequest(ContentType.JSON)
 				.headers(header).params(param) //pegando o header e o param
 				.when().get(endpoint)          // fazendo um GET e clicando no SEND
